@@ -9,5 +9,7 @@ WORK=$PROJECTS/Work
 
 # Projects/Sites
 
-# Personal site
+## Personal site
 git clone git@github.com:JayRVigilla/nextjs-portfolio.git $PERSONAL/nextjs-portfolio
+## Personal Dot files
+git clone git@github.com:JayRVigilla/j_dot_files.git $PERSONAL/nextjs-portfolio
