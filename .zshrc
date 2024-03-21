@@ -107,6 +107,122 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Provide most useful parts of oh-my-zsh
+autoload -Uz compinit && compinit
+
+# completion is case-insensitive, always show all possible completions
+# bind "set completion-ignore-case on"
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# Add most common/useful git shortcuts
+alias g="git"
+alias ga="git add"
+alias gaa="git add --all"
+alias gcam="gaa && git commit"
+alias gd="git diff"
+alias gl="git pull"
+alias gla="git pull --all"
+alias glo="git log --oneline --decorate --color"
+alias glog="git log --oneline --decorate --color --graph"
+alias gm="git merge"
+alias push="git push"
+alias gr="git remote"
+alias grv="git remote -v"
+alias gst="git status"
+alias gch="git checkout"
+alias gsq="git rebase -i"
+alias reloadshell="source ~/.zshrc"
+alias sos="gaa && git commit -m 'sanity save'"
+alias gcl="gaa && git commit -m 'clean'"
+alias sosp="sos && git push"
+alias prem="gaa && git commit -m '*** PreMerge ***'"
+alias pipline="gaa && git commit -m 'Fix for pipeline'"
+# specific to Avail/avail-ui-sp repo branches
+alias squash="gsq development"
+alias gup="gch development && gl"
+alias gupm="gup && gch - && gm development"
+# specific to Avail/availkit-js repo branches
+alias ak-squash="gsq develop"
+alias ak-gup="gch develop && gl"
+
+
+# Update Homebrew
+alias kegger="brew update && brew upgrade"
+
+alias enableIndexing="sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist"
+alias disableIndexing="sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist"
+alias NMRefresh="echo ' ***** DELETING package-lock *****' && rm -rf package-lock.json && echo '  ***** package-lock DELETED *****' &&  echo '   ***** DELETING node_modules *****' && rm -R node_modules && echo '   ***** node_modules DELETED *****' && echo '    ***** installing... *****' && npm install && echo '     ***** INSTALL COMPLETE *****'"
+
+# Made specifically for Avail web-ui-spa
+alias NMReloadLegacy="npm login &&\
+echo 'DELETING package-lock' &&\
+rm -rf package-lock.json &&\
+echo ' * package-lock DELETED' &&\
+echo '* DELETING node_modules ' &&\
+rm -rf node_modules &&\
+echo ' * node_modules DELETED' &&\
+nvm use 16.10 &&\
+echo ' * Clearing cache' &&\
+npm cache clean --force &&\
+echo '* Installing with legacy-peer-deps flag' &&\
+npm install --legacy-peer-deps &&\
+echo ' * INSTALL COMPLETE *****'"
+
+# Made specifically for Avail web-ui-spa
+alias NMReloadForce="npm login &&\
+echo 'DELETING package-lock' &&\
+rm -rf package-lock.json &&\
+echo ' * package-lock DELETED' &&\
+echo '* DELETING node_modules ' &&\
+rm -rf node_modules &&\
+echo ' * node_modules DELETED' &&\
+nvm use 16.10 &&\
+echo ' * Clearing cache' &&\
+npm cache clean --force &&\
+echo '* Installing with legacy-peer-deps flag' &&\
+npm install --force &&\
+echo ' * INSTALL COMPLETE *****'"
+
+# Made specifically for Avail web-ui-spa
+alias NMReload="npm login &&\
+echo 'DELETING package-lock' &&\
+rm -rf package-lock.json &&\
+echo ' * package-lock DELETED' &&\
+echo '* DELETING node_modules ' &&\
+rm -rf node_modules &&\
+echo ' * node_modules DELETED' &&\
+nvm use 16.10 &&\
+echo ' * Clearing cache' &&\
+npm cache clean --force &&\
+echo '* Installing ' &&\
+npm install &&\
+echo ' * INSTALL COMPLETE *****'"
+
+###############################################################################
+# Custom zsh prompt -- run this fn before each prompt to get tech info
+
+autoload -Uz vcs_info
+autoload -U colors && colors
+
+precmd() { vcs_info }
+setopt prompt_subst
+PS1='%{$fg[red]%}${vcs_info_msg_0_}%{$reset_color%} %3~ '
+
+plugins=(virtualenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
+
+setopt autocd           # If cmd not found, try "cd cmd"
+setopt histverify       # Confirm history editing
+
+# Don't close shell on C-D
+set -o ignoreeof
+
+
+# Useful aliases
+alias tree="tree --noreport -C -I '__pycache__|node_modules|venv'"
+alias ls="ls -F"
+alias l="ls -lah"
