@@ -1,5 +1,5 @@
 #!/bin/sh
-
+DOTFILES=$HOME/.dotfiles
 echo "Setting up your Mac..."
 
 # Check for Oh My Zsh and install if we don't have it
@@ -46,8 +46,8 @@ mkdir $HOME/Avail
 mkdir $HOME/Projects
 
 # Create Projects subdirectories
-mkdir $HOME/Projects/Apps # example
-mkdir $HOME/Projects/Sites # example
+mkdir $HOME/Projects/Personal
+mkdir $HOME/Projects/Work
 
 # Clone Github repositories
 $DOTFILES/clone.sh
