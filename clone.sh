@@ -15,3 +15,5 @@ git clone git@github.com:JayRVigilla/nextjs-portfolio.git $PERSONAL/nextjs-portf
 git clone git@github.com:JayRVigilla/j_dot_files.git $PERSONAL/nextjs-portfolio
 ## Service Notes Project
 git clone git@github.com:JayRVigilla/service-notes-BE.git $PERSONAL/service-notes-BE
+## Draw on live video Project
+git clone git@github.com:JayRVigilla/nextjs-drawVideo.git $PERSONAL/nextjs-drawVideo
