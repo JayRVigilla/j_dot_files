@@ -26,7 +26,7 @@ If you're migrating from an existing Mac, you should first make sure to backup a
 
 After backing up your old Mac you may now follow these install instructions to setup a new one.
 
-1. Update macOS to the latest version through system preferences
+1. Update macOS to the latest version through system preferences.
 2. [Generate a new public and private SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) by running:
 
    ```zsh
@@ -38,15 +38,19 @@ After backing up your old Mac you may now follow these install instructions to s
     ```zsh
     git clone --recursive git@github.com:JayRVigilla/j_dot_files.git ~/.dotfiles
     ```
+    OR
+    You can just save your version to the cloud or USB storage, it's not too big. Just remember that, if you didn't make any changes, you're also cloning this repo in  `clone.sh` to `~/Projects/Personal/`. You will want to pull the latest from the repo after cloning.
 
-4. Run the installation with:
+4. Name the computer in `.macos` on lines 21-24.
+
+5. Run the installation with:
 
     ```zsh
     ~/.dotfiles/fresh.sh
     ```
 
-5. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
-6. Restart your computer to finalize the process
+6. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
+7. Restart your computer to finalize the process
 
 Your Mac is now ready to use!
 
