@@ -17,22 +17,16 @@ brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'stripe/stripe-cli/stripe'
-brew 'stripe/stripe-mock/stripe-mock'
 brew 'svn' # Needed to install fonts
 
-brew 'gifsicle'
-
 # Development
-brew 'composer'
-brew 'dbeaverultimate' # Universal database tool and SQL client
+cask 'dbeaverultimate' # Universal database tool and SQL client
 brew 'graphql-cli'
-brew 'graphql-playground' #GraphQL IDE for better development workflows
-brew 'imagemagick'
-brew 'meilisearch'
+cask 'graphql-playground' #GraphQL IDE for better development workflows
 brew 'mysql'
 brew 'nginx'
 brew 'node'
-cask 'postgresql@13'
+Brew 'postgresql@13'
 cask 'postico' # GUI client for PostgreSQL databases
 brew 'redis'
 brew 'yarn'
@@ -46,19 +40,15 @@ cask 'firefox'
 cask 'github'
 cask 'google-chrome'
 cask 'grammarly-desktop'
-brew 'libreoffice'
-brew 'notion'
-cask 'nvm'
+cask 'libreoffice'
+cask 'notion'
+brew 'nvm'
 cask 'postman'
 cask 'slack'
 cask 'visual-studio-code'
 cask 'vmware-fusion'
 cask 'whatsapp'
 cask 'zoom'
-
-# Quicklook
-cask 'qlmarkdown'
-cask 'quicklook-json'
 
 # Fonts
 cask 'font-lato'
