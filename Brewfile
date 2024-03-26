@@ -26,7 +26,7 @@ cask 'graphql-playground' #GraphQL IDE for better development workflows
 brew 'mysql'
 brew 'nginx'
 brew 'node'
-Brew 'postgresql@13'
+Brew 'postgresql@14'
 cask 'postico' # GUI client for PostgreSQL databases
 brew 'redis'
 brew 'yarn'
