@@ -16,8 +16,6 @@ cd $PERSONAL/nextjs-portfolio && npm install
 
 ## Personal Dot files
 git clone git@github.com:JayRVigilla/j_dot_files.git $PERSONAL/j_dot_files
-# install dependencies
-cd $PERSONAL/j_dot_files && npm install
 
 ## Service Notes Project
 git clone git@github.com:JayRVigilla/ServiceNotesBE.git $PERSONAL/ServiceNotes/ServiceNotesBE
