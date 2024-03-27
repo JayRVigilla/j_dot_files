@@ -30,6 +30,7 @@ brew 'postgresql@14'
 cask 'postico' # GUI client for PostgreSQL databases
 brew 'redis'
 brew 'yarn'
+cask 'postgres-unofficial' # app wrapper for postgres
 
 # Apps
 cask 'anaconda'
