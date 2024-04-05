@@ -50,6 +50,7 @@ cask 'visual-studio-code'
 cask 'vmware-fusion'
 cask 'whatsapp'
 cask 'zoom'
+cask 'wordpresscom'
 
 # Fonts
 cask 'font-lato'
