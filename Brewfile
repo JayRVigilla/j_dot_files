@@ -18,6 +18,7 @@ brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'stripe/stripe-cli/stripe'
 brew 'svn' # Needed to install fonts
+brew 'openssl' # https://www.openssl.org/
 
 # Development
 cask 'dbeaverultimate' # Universal database tool and SQL client
@@ -31,6 +32,8 @@ cask 'postico' # GUI client for PostgreSQL databases
 brew 'redis'
 brew 'yarn'
 cask 'postgres-unofficial' # app wrapper for postgres
+cask 'electron-fiddle'  # Electron expereiments/playground
+cask 'surge'
 
 # Apps
 cask 'anaconda'
@@ -51,6 +54,9 @@ cask 'vmware-fusion'
 cask 'whatsapp'
 cask 'zoom'
 cask 'wordpresscom'
+cask 'chrome-remote-desktop-host'  # Installer
+cask 'raspberry-pi-imager'
+cask 'imageoptim'
 
 # Fonts
 cask 'font-lato'
