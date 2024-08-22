@@ -1,5 +1,5 @@
 #!/bin/sh
-DOTFILES=$HOME/.dotfiles
+DOTFILES=~/.dotfiles/
 echo "Setting up your Mac..."
 
 # Check for Oh My Zsh and install if we don't have it

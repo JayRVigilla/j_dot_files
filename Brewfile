@@ -8,27 +8,26 @@ tap 'stripe/stripe-cli'
 
 # Binaries
 brew 'awscli'
-brew 'bash' # Latest Bash version
-brew 'coreutils' # Those that come with macOS are outdated
+brew 'bash'
+brew 'coreutils'
 brew 'gh' # GitHub command-line tool
 brew 'git'
 brew 'grep'
 brew 'mackup'
-brew 'mas' # Mac App Store manager
-brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
+brew 'mas'
+brew 'pkg-config'
 brew 'stripe/stripe-cli/stripe'
-brew 'svn' # Needed to install fonts
-brew 'openssl' # https://www.openssl.org/
+brew 'svn'
 
 # Development
-cask 'dbeaverultimate' # Universal database tool and SQL client
+cask 'dbeaverultimate'
 brew 'graphql-cli'
-cask 'graphql-playground' #GraphQL IDE for better development workflows
+cask 'graphql-playground'
 brew 'mysql'
 brew 'nginx'
 brew 'node'
 brew 'postgresql@14'
-cask 'postico' # GUI client for PostgreSQL databases
+cask 'postico'
 brew 'redis'
 brew 'yarn'
 cask 'postgres-unofficial' # app wrapper for postgres
