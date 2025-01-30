@@ -20,7 +20,7 @@ brew 'stripe/stripe-cli/stripe'
 brew 'svn'
 
 # Development
-cask 'dbeaverultimate'
+cask 'dbeaver-community' # Universal database tool and SQL client
 brew 'graphql-cli'
 cask 'graphql-playground'
 brew 'mysql'
@@ -52,7 +52,7 @@ cask 'visual-studio-code'
 cask 'vmware-fusion'
 cask 'whatsapp'
 cask 'zoom'
-cask 'wordpresscom'
+# cask 'wordpresscom'
 cask 'chrome-remote-desktop-host'  # Installer
 cask 'raspberry-pi-imager'
 cask 'imageoptim'
@@ -74,3 +74,4 @@ mas 'Speedtest', id: 1153157709
 mas 'Ooooo', id: 1482773008
 mas 'Solar App', id: 450545814
 mas 'Multi Monitor Wallpaper', id: 504284434
+mas 'Clockify Desktop', id: id1364502317
