@@ -24,6 +24,7 @@ cask 'dbeaver-community' # Universal database tool and SQL client
 brew 'graphql-cli'
 cask 'graphql-playground'
 brew 'mysql'
+brew 'sqlite'
 brew 'nginx'
 brew 'node'
 brew 'postgresql@14'
@@ -31,7 +32,7 @@ cask 'postico'
 brew 'redis'
 brew 'yarn'
 cask 'postgres-unofficial' # app wrapper for postgres
-cask 'electron-fiddle'  # Electron expereiments/playground
+cask 'electron-fiddle'  # Electron experiments/playground
 cask 'surge'
 
 # Apps
@@ -73,5 +74,5 @@ mas 'Giphy Capture', id: 668208984
 mas 'Speedtest', id: 1153157709
 mas 'Ooooo', id: 1482773008
 mas 'Solar App', id: 450545814
-mas 'Multi Monitor Wallpaper', id: 504284434
+# mas 'Multi Monitor Wallpaper', id: 504284434
 mas 'Clockify Desktop', id: id1364502317
