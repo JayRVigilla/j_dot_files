@@ -26,7 +26,7 @@ If you're migrating from an existing Mac, you should first make sure to backup a
 
 After backing up your old Mac you may now follow these install instructions to setup a new one.
 
-1. Update macOS to the latest version through system preferences
+1. Update macOS to the latest version through system preferences.
 2. [Generate a new public and private SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) by running:
 
    ```zsh
@@ -38,15 +38,19 @@ After backing up your old Mac you may now follow these install instructions to s
     ```zsh
     git clone --recursive git@github.com:JayRVigilla/j_dot_files.git ~/.dotfiles
     ```
+    OR
+    You can just save your version to the cloud or USB storage, it's not too big. Just remember that, if you didn't make any changes, you're also cloning this repo in  `clone.sh` to `~/Projects/Personal/`. You will want to pull the latest from the repo after cloning.
 
-4. Run the installation with:
+4. Name the computer in `.macos` on lines 21-24.
+
+5. Run the installation with:
 
     ```zsh
     ~/.dotfiles/fresh.sh
     ```
 
-5. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
-6. Restart your computer to finalize the process
+6. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
+7. Restart your computer to finalize the process
 
 Your Mac is now ready to use!
 
@@ -64,7 +68,7 @@ If you want to start with your own dotfiles from this setup, it's pretty easy to
 
 Go through the [`.macos`](./.macos) file and adjust the settings to your liking. You can find much more settings at [the original script by Mathias Bynens](https://github.com/mathiasbynens/dotfiles/blob/master/.macos) and [Kevin Suttle's macOS Defaults project](https://github.com/kevinSuttle/MacOS-Defaults).
 
-Check out the [`Brewfile`](./Brewfile) file and adjust the apps you want to install for your machine. Use [their search page](https://caskroom.github.io/search) to check if the app you want to install is available. Do take note of if your app is a `cask`, it will make a difference. 
+Check out the [`Brewfile`](./Brewfile) file and adjust the apps you want to install for your machine. Use [their search page](https://caskroom.github.io/search) to check if the app you want to install is available. Do take note of if your app is a `cask`, it will make a difference.
 
 Check out the [`aliases.zsh`](./aliases.zsh) file and add your own aliases. If you need to tweak your `$PATH` check out the [`path.zsh`](./path.zsh) file. These files get loaded in because the `$ZSH_CUSTOM` setting points to the `.dotfiles` directory. You can adjust the [`.zshrc`](./.zshrc) file to your liking to tweak your Oh My Zsh setup. More info about how to customize Oh My Zsh can be found [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Customization).
 

@@ -11,5 +11,18 @@ WORK=$PROJECTS/Work
 
 ## Personal site
 git clone git@github.com:JayRVigilla/nextjs-portfolio.git $PERSONAL/nextjs-portfolio
+# install dependencies
+cd $PERSONAL/nextjs-portfolio && npm install
+
 ## Personal Dot files
-git clone git@github.com:JayRVigilla/j_dot_files.git $PERSONAL/nextjs-portfolio
+git clone git@github.com:JayRVigilla/j_dot_files.git $PERSONAL/j_dot_files
+
+## Service Notes Project
+git clone git@github.com:JayRVigilla/ServiceNotesBE.git $PERSONAL/ServiceNotes/ServiceNotesBE
+# install dependencies
+cd $PERSONAL/ServiceNotes/ServiceNotesBE && npm install
+
+## Draw on live video Project
+git clone git@github.com:JayRVigilla/nextjs-drawVideo.git $PERSONAL/nextjs-drawVideo
+# install dependencies
+cd $PERSONAL/nextjs-drawVideo && npm install

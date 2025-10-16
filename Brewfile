@@ -8,28 +8,32 @@ tap 'stripe/stripe-cli'
 
 # Binaries
 brew 'awscli'
-brew 'bash' # Latest Bash version
-brew 'coreutils' # Those that come with macOS are outdated
+brew 'bash'
+brew 'coreutils'
 brew 'gh' # GitHub command-line tool
 brew 'git'
 brew 'grep'
 brew 'mackup'
-brew 'mas' # Mac App Store manager
-brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
+brew 'mas'
+brew 'pkg-config'
 brew 'stripe/stripe-cli/stripe'
-brew 'svn' # Needed to install fonts
+brew 'svn'
 
 # Development
-cask 'dbeaverultimate' # Universal database tool and SQL client
+cask 'dbeaver-community' # Universal database tool and SQL client
 brew 'graphql-cli'
-cask 'graphql-playground' #GraphQL IDE for better development workflows
+cask 'graphql-playground'
 brew 'mysql'
+brew 'sqlite'
 brew 'nginx'
 brew 'node'
-Brew 'postgresql@13'
-cask 'postico' # GUI client for PostgreSQL databases
+brew 'postgresql@14'
+cask 'postico'
 brew 'redis'
 brew 'yarn'
+cask 'postgres-unofficial' # app wrapper for postgres
+cask 'electron-fiddle'  # Electron experiments/playground
+cask 'surge'
 
 # Apps
 cask 'anaconda'
@@ -49,6 +53,10 @@ cask 'visual-studio-code'
 cask 'vmware-fusion'
 cask 'whatsapp'
 cask 'zoom'
+# cask 'wordpresscom'
+cask 'chrome-remote-desktop-host'  # Installer
+cask 'raspberry-pi-imager'
+cask 'imageoptim'
 
 # Fonts
 cask 'font-lato'
@@ -68,3 +76,5 @@ mas 'Ooooo', id: 1482773008
 mas 'Solar App', id: 450545814
 mas 'Multi Monitor Wallpaper', id: 504284434
 mas 'Speedtest by Ookla', id: 1153157709
+# mas 'Multi Monitor Wallpaper', id: 504284434
+mas 'Clockify Desktop', id: id1364502317
