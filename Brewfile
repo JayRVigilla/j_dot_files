@@ -34,6 +34,11 @@ brew 'yarn'
 cask 'postgres-unofficial' # app wrapper for postgres
 cask 'electron-fiddle'  # Electron experiments/playground
 cask 'surge'
+brew 'pnpm'
+
+# Hacking
+cask 'gobuster'
+cask 'balenaetcher' # used to install Tails to Mac
 
 # Apps
 cask 'anaconda'
@@ -57,6 +62,8 @@ cask 'zoom'
 cask 'chrome-remote-desktop-host'  # Installer
 cask 'raspberry-pi-imager'
 cask 'imageoptim'
+cask 'clockify'
+cask 'vlc' # VLC Media Player
 
 # Fonts
 cask 'font-lato'

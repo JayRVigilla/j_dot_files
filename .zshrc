@@ -267,3 +267,10 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+# Teal Health
+eval "$(/Users/jayvigilla/.local/bin/mise activate zsh)"
+alias avadak="node /Users/jayvigilla/Projects/Work/Teal/admin-scripts/admin-portal/delete-user.js _ true"
+alias avada="node /Users/jayvigilla/Projects/Work/Teal/admin-scripts/admin-portal/delete-user.js"
+alias logAdmin="node /Users/jayvigilla/Projects/Work/Teal/admin-scripts/admin-portal/loginToAdminPortal.js"
+# clean Teal automated emails and downloaded cypress error screenshots
+alias scourgify="bash ~/Scripts/run_daily_cleanup.sh"
