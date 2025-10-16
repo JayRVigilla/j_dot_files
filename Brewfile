@@ -67,3 +67,4 @@ mas 'Speedtest', id: 1153157709
 mas 'Ooooo', id: 1482773008
 mas 'Solar App', id: 450545814
 mas 'Multi Monitor Wallpaper', id: 504284434
+mas 'Speedtest by Ookla', id: 1153157709

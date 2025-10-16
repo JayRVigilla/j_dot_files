@@ -155,7 +155,17 @@ alias kegger="brew update && brew upgrade"
 
 alias enableIndexing="sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist"
 alias disableIndexing="sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist"
-alias NMRefresh="echo ' ***** DELETING package-lock *****' && rm -rf package-lock.json && echo '  ***** package-lock DELETED *****' &&  echo '   ***** DELETING node_modules *****' && rm -R node_modules && echo '   ***** node_modules DELETED *****' && echo '    ***** installing... *****' && npm install && echo '     ***** INSTALL COMPLETE *****'"
+alias NMRefresh="echo ' ***** DELETING package-lock *****' &&\
+rm -rf package-lock.json &&\
+echo '  ***** package-lock DELETED *****' &&\
+echo '   ***** DELETING node_modules *****' &&\
+rm -R node_modules &&\
+echo '   ***** node_modules DELETED *****' &&\
+echo ' * Clearing cache' with --force &&\
+npm cache clean --force &&\
+echo '    ***** installing... *****' &&\
+npm install &&\
+ echo '     ***** INSTALL COMPLETE *****'"
 
 # Made specifically for Avail web-ui-spa
 alias NMReloadLegacy="npm login &&\
@@ -226,3 +236,34 @@ set -o ignoreeof
 alias tree="tree --noreport -C -I '__pycache__|node_modules|venv'"
 alias ls="ls -F"
 alias l="ls -lah"
+
+
+############################################################################
+# Career Pathways
+
+## Backend
+alias vb-back-start1="source venv/bin/activate && docker compose up"
+alias vb-refresh="uvicorn main:app --reload"
+alias vb-back-start2="source venv/bin/activate && vb-refresh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+############################################################################
+# Teal Health
+
+## Storybook repo
+alias th-storybook="pnpm run storybook-nextjs"
+alias avadak="node /Users/jayvigilla/Projects/Work/TealHealth/admin-scripts/admin-portal/delete-user.js _ true"
+alias avada="node /Users/jayvigilla/Projects/Work/TealHealth/admin-scripts/admin-portal/delete-user.js"
+alias logAdmin="node /Users/jayvigilla/Projects/Work/TealHealth/admin-scripts/admin-portal/loginToAdminPortal.js"
+
+# pnpm
+export PNPM_HOME="/Users/jayvigilla/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
